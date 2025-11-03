@@ -29,3 +29,13 @@ My goal is to help you study English smarter, stay motivated, and see meaningful
 I will continue updating this site with useful resources, learning techniques, and proven study plans to help you achieve high English scores and real communication ability.
 
 Start your journey to mastering English today!
+
+## Reference
+
+[TOEICとは？基本情報や勉強法まで網羅的に解説！｜生涯学習のユーキャン](https://www.u-can.co.jp/course/data/in_html/90/column/column03.html)
+
+
+[勉強法 | english-study](https://shinichi0713.github.io/english-study/how-to-study)
+
+
+https://shinichi0713.github.io/english-study/how-to-get-high-longsentence.md
