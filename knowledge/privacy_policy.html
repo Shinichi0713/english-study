@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x30d7;&#x30e9;&#x30a4;&#x30d0;&#x30b7;&#x30fc;&#x30dd;&#x30ea;&#x30b7;&#x30fc;&#xff08;&#x96db;&#x5f62;&#xff09;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+<style>
+    /* ページ全体の背景と余白の調整 */
+    body.vscode-body {
+        max-width: 800px;
+        margin: 0 auto !important;
+        padding: 40px 20px !important;
+        background-color: #f9f9f9 !important; /* 薄いグレーの背景 */
+        color: #333 !important;
+        line-height: 1.8 !important;
+    }
+
+    /* コンテンツを白いカード状に見せる */
+    body.vscode-body > * {
+        background-color: #ffffff;
+    }
+
+    /* タイトル（H2）の装飾 */
+    h2#プライバシーポリシー雛形 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db; /* アクセントカラーの青 */
+        background: transparent;
+    }
+
+    /* 各項目の見出し（H3）の装飾 */
+    h3 {
+        border-left: 5px solid #3498db !important;
+        padding: 5px 15px !important;
+        margin-top: 40px !important;
+        margin-bottom: 15px !important;
+        font-size: 20px !important;
+        background: #f0f7fb !important; /* 見出しの背景を薄い青に */
+        border-bottom: none !important;
+    }
+
+    /* 本文の調整 */
+    p {
+        margin-bottom: 1.5em !important;
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    /* リンクの装飾 */
+    a {
+        color: #3498db !important;
+        text-decoration: underline !important;
+    }
+    
+    a:hover {
+        color: #2980b9 !important;
+        text-decoration: none !important;
+    }
+
+    /* 制定日の段落を右寄せにする（最後のPタグ） */
+    body.vscode-body > p:last-child {
+        margin-top: 50px !important;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: right;
+        font-weight: bold;
+        color: #7f8c8d;
+    }
+
+    /* モバイル対応 */
+    @media (max-width: 600px) {
+        body.vscode-body {
+            padding: 20px 15px !important;
+        }
+        h2#プライバシーポリシー雛形 {
+            font-size: 22px;
+        }
+    }
+</style>
+<style>
+    /* プロフィールボックスの装飾 */
+    .author-profile-box {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+        border: 1px solid #e1e8ed;
+    }
+
+    /* アイコン部分 */
+    .author-avatar {
+        width: 80px;
+        height: 80px;
+        background-color: #f0f7fb;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+        flex-shrink: 0;
+    }
+
+    .avatar-emoji {
+        font-size: 40px;
+    }
+
+    /* テキスト部分 */
+    .author-info {
+        flex-grow: 1;
+    }
+
+    .author-name {
+        font-size: 22px !important;
+        margin: 0 0 8px 0 !important;
+        color: #2c3e50 !important;
+        font-weight: bold;
+        border: none !important;
+        background: none !important;
+    }
+
+    .author-intro {
+        font-size: 15px !important;
+        color: #555 !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+    }
+
+    /* 区切り線 */
+    .profile-divider {
+        border: none;
+        height: 1px;
+        background-color: #eee;
+        margin: 40px 0;
+    }
+
+    /* スマホ表示での調整 */
+    @media (max-width: 600px) {
+        .author-profile-box {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        .author-avatar {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+        </head>
+        <body class="vscode-body vscode-light">
+<div class="author-profile-box">
+    <div class="author-avatar">
+        <span class="avatar-emoji">👨‍💻</span>
+    </div>
+    <div class="author-info">
+        <h1 class="author-name">3 Sons Lover</h1>
+        <p class="author-intro">
+            愛知県在住のAI &amp; ITエンジニアです。と同時に3児の父です。<br>
+            日々の仕事で感動したことを徒然に書いていきます。
+        </p>
+    </div>
+</div>
+
+<hr class="profile-divider">
+
+
+            <h2 id="プライバシーポリシー雛形">プライバシーポリシー（雛形）</h2>
+<h3 id="個人情報の利用目的">個人情報の利用目的</h3>
+<p>当ブログでは、お問い合わせやコメント投稿の際に、お名前（ハンドルネーム）やメールアドレス等の個人情報を入力いただく場合がございます。
+取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用いたしません。</p>
+<h3 id="広告の配信について">広告の配信について</h3>
+<p>当ブログは、第三者配信の広告サービス「Google AdSense（グーグルアドセンス）」を利用しています。
+広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。Cookieを無効にする設定およびGoogleアドセンスに関する詳細は「<a href="https://policies.google.com/technologies/ads?hl=ja">広告 – ポリシーと規約 – Google</a>」をご覧ください。</p>
+<h3 id="アクセス解析ツールについて">アクセス解析ツールについて</h3>
+<p>当ブログでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。</p>
+<h3 id="コメントについて">コメントについて</h3>
+<p>当ブログへのコメントを残す際に、IPアドレスを収集しています。これはブログの標準機能としてサポートされている機能で、スパムや荒らしへの対応以外にこのIPアドレスを使用することはありません。
+なお、全てのコメントは管理人が事前にその内容を確認し、承認したうえでの掲載となります。あらかじめご了承ください。</p>
+<h3 id="免責事項">免責事項</h3>
+<p>当ブログからのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。
+また、当ブログのコンテンツ・情報について、できる限り正確な情報を掲載するよう努めておりますが、正確性や安全性を保証するものではありません。情報が古くなっていることもございます。
+当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
+<h3 id="著作権肖像権について">著作権・肖像権について</h3>
+<p>当ブログで掲載している文章や画像などにつきましては、無断転載することを禁止します。
+当ブログは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、お問い合わせフォームよりご連絡ください。迅速に対応いたします。</p>
+<h3 id="プライバシーポリシーの変更について">プライバシーポリシーの変更について</h3>
+<p>当ブログは、個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直しその改善に努めます。
+修正された最新のプライバシーポリシーは常に本ページにて開示されます。</p>
+<p>制定日：[2025年12月31日]</p>
+
+            
+            
+        </body>
+        </html>
