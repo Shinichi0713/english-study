@@ -6,20 +6,9 @@ this repository is the site where store the examples of studying English.
 
 and find to get the opportunity to improve the efficiency of studying English.
 
-
-
-
-
-
-
-
-
-
 ## references
 
-
 [Free Practice Tests For TOEIC SW - Speaking and Writing](https://estudyme.com/en/practice/toeic-practice-speaking-writing/)
-
 
 for reading
 
