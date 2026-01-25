@@ -6,6 +6,10 @@ this repository is the site where store the examples of studying English.
 
 and find to get the opportunity to improve the efficiency of studying English.
 
+## tendency
+
+- when solvling small blank, miss reading beforehand and context. so, must focus on reading context.
+
 ## references
 
 [Free Practice Tests For TOEIC SW - Speaking and Writing](https://estudyme.com/en/practice/toeic-practice-speaking-writing/)
