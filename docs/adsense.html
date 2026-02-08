@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x30e2;&#x30c1;&#x30d9;&#x30fc;&#x30b7;&#x30e7;&#x30f3;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+nav {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0 40px 0;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 「目次」というタイトル */
+nav h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0969da;
+    color: #24292f;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* タイトルの前にアイコン（絵文字）を追加 */
+nav h3::before {
+    content: "📖";
+    margin-right: 8px;
+}
+
+/* リストのスタイル調整 */
+#toc {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#toc li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* リンクのスタイル */
+#toc a {
+    color: #0969da;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+#toc a:hover {
+    color: #cf222e;
+    transform: translateX(5px); /* ホバー時に少し右に動く */
+}
+
+/* h3（小見出し）がある場合のネスト表現（JSの修正も必要） */
+.toc-h3 {
+    padding-left: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+
+/* 記事タイトル (h1) */
+h1 {
+    font-size: 2rem;
+    color: #24292f;
+    line-height: 1.3;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 3px double #e1e4e8; /* 二重線で上品に */
+    text-align: center; /* タイトルを中央に寄せて特別感を出す */
+}
+
+/* セクション見出し (h2) */
+h2 {
+    font-size: 1.5rem;
+    color: #24292f;
+    padding: 0.5rem 1rem;
+    margin: 40px 0 20px 0;
+    background: linear-gradient(transparent 70%, #e8f0fe 70%); /* 下側に薄い色のアクセント */
+    border-left: 6px solid #0969da; /* 目次のテーマカラーと合わせる */
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+/* 強調文字 (strong) */
+strong {
+    font-weight: bold;
+    color: #cf222e; /* ホバー時の赤色と合わせて統一感を出す */
+    background: linear-gradient(transparent 60%, #fff2cc 60%); /* 黄色のマーカー風 */
+    padding: 0 2px;
+}
+
+/* 引用のコンテナ */
+blockquote {
+    position: relative;
+    padding: 20px 30px;
+    margin: 30px 0;
+    background-color: #f6f8fa; /* 目次の背景より少しだけ濃いグレー */
+    border-left: 5px solid #d0d7de; /* 落ち着いたグレーの境界線 */
+    color: #57606a; /* 文字色は少し薄くして引用らしさを出す */
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+/* 引用符のアイコンを装飾として追加 */
+blockquote::before {
+    content: "“";
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    font-size: 40px;
+    color: #d0d7de;
+    font-family: serif;
+    line-height: 1;
+}
+
+/* 読者になるボタンのデザイン */
+.btn-subscribe {
+    display: inline-block;
+    padding: 12px 35px; /* 横幅を広めにとって存在感を出します */
+    background-color: #383838; /* お好みの色に変更してください */
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #555555;
+    text-decoration: none;
+}
+
+/* はてなブログで見えてしまう数式データを非表示にする */
+.katex-html {
+    display: none !important;
+}
+
+.katex-mathml {
+    display: inline !important;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+<nav>
+        <h3>目次</h3>
+        <ul id="toc"></ul> 
+</nav>
+
+
+            <p>無料のはてなブログですがgoogle adsenseに合格しました。
+当ブログは開設は2019年ですが、6年ブランクを作り、2025年の11月中旬からはてなブログの記事復帰してから記事数が86の時点で合格でした。</p>
+<p>本日は合格するまでにやった内容を話ししようと思います。</p>
+<h2 id="モチベーション">モチベーション</h2>
+<p>ブログ記載再開するにあたり、2019年当時と大分状況が変わっていました。</p>
+<ul>
+<li>自分のスキルが大きく変わった(ソフトエンジニアなり立てから、6年経過してAIやネットワークに自信を持つようになりました)</li>
+<li>生成AIが使えるようになった(こんなことを書きたいとイメージしてから構成を考えると、文章案がすぐにつくれるようになりました)</li>
+</ul>
+<p>著者の場合のブログを書いていく上での一番の障害が文案を考える時間でしたが、書きたい案、文章を考えるという時間が大幅に減りました。
+当時の挫折理由がほぼ解消されてました。</p>
+<p>と同時に、再開するにあたり当面の目標が欲しいということで、google adsenseへの合格を設定しました。</p>
+<h2 id="合格の条件の考察">合格の条件の考察</h2>
+<h3 id="無料ブログで合格できるか">無料ブログで合格できるか</h3>
+<p>再開当時に無料のはてなブログで合格できるかが懸念材料でした。
+情報集めてみると、無料では合格できないという記事と、無料でも合格できるという記事両方が存在していました。</p>
+<p>無料では合格できないという記事は、合格がなかなかできず、帰納的に結論付けていた。
+→本当に無料では合格できないという根拠ではなさげ。</p>
+<p>無料でも合格できる記事に記載されていた内容は、合格までのプロセスも具体的に記載されていた。
+→事実ベースの話っぽい、と感じました。</p>
+<p>根拠として事実ベースの話、無料でも合格できるの方が事実っぽいと思いました。
+一旦無料ブログのままでgoogle adsenseの合格を目指すことにしました。</p>
+<h3 id="合格の条件">合格の条件</h3>
+<p>YouTubeで何本か動画があります。</p>
+<p>説明の内容で共通して言っていたことを整理するとこんな感じです。</p>
+<ol>
+<li>ある程度の記事数が必要(30記事くらいが目安)</li>
+<li>ニーズのあるテーマである</li>
+<li>記事の質を上げることを意識する</li>
+<li>記事のジャンルは絞る</li>
+</ol>
+<p>2と3は、google adsenseの合格の条件とも整合していました。</p>
+<p>なので、テーマ選びと、記事の質を上げることは重要でしょう。</p>
+<p>記事のジャンルを絞ることですが。
+当初はあんまり意識していませんでした。
+書きたい内容と、自分のテーマとごっちゃにブログを書いていました。</p>
+<p>今見返えすと、やはり全部大事だったかもしれません。</p>
+<h2 id="合格までのアクション">合格までのアクション</h2>
+<h3 id="記事のテーマ">記事のテーマ</h3>
+<p>著者の場合書きたい内容で、社会的にニーズあるかと考えてた共通項は</p>
+<ol>
+<li>AI関係の内容にしよう</li>
+<li>プログラム関係の話にしよう</li>
+</ol>
+<p>こんな程度です。
+今見ても反省点でますね。</p>
+<p>というのは、ネット検索している人が、やってみたいけど、実際どうなのか分からない、というテーマはAI関係の場合少数だと思います。</p>
+<p>ブログの人気ジャンルは、こんなところでしょうか。</p>
+<ol>
+<li>映画</li>
+<li>旅行</li>
+<li>ゲーム</li>
+</ol>
+<p>お金かかるので、やりたいけど、どうしようか迷う。
+そんな時にすでに体験している人の話みてみよう、とか。</p>
+<p>ゲーム(のような人間の行動障壁が小さく多幸感が得られやすいもの)で、自分以外の人はどうしているだろう。</p>
+<p>のようなテーマの方がブログには有利なようです。
+ブログ書いていくときは、出来れば上に沿うテーマにしていくと、展開が楽かもと思いました。</p>
+<h3 id="1度目">1度目</h3>
+<p>2026年の1月初めに、記事数が60くらいの段階で、google adsenseに申請し、不合格。
+返ってきた不合格の利用は以下です。</p>
+<ul>
+<li>カスタマエクスペリエンスの欠如</li>
+</ul>
+<p>全然よくわからない・・・。</p>
+<p>結局いろいろ考えてみた結論が以下のどちらかでした。</p>
+<ol>
+<li>テーマ自体あんまりニーズがないもの(?)</li>
+<li>記事の質が良くない</li>
+<li>自分の書きたいことを書いてた</li>
+</ol>
+<p>1はしょうがない部分あります。
+少数派で進めるという意思で進めたので、今更の変更するべきではないと思いました。</p>
+<p>2の記事の質が良くないのは、自分のブログ見返して感じた次第です。</p>
+<p>生成AIを使って式を書いてもらってたのですが、記事が崩れたり、文章の中でちょっと辻褄が合わない部分が見つかりました。
+→見ているユーザーのカスタマエクスペリエンスを低下させる要因になってました。</p>
+<p>3についてですが。
+著者はもともとボクシングしていたことがあって、観戦記や気になった選手のことをついついテーマにしてしまいます。
+結果、何個かボクシング関係の記事を書いてました。
+AI関係のテーマとずれるようなテーマで、これはYoutubeで説明されていた&quot;記事のテーマを絞る&quot;に反していました。</p>
+<p><strong>次のアクションに向けて</strong></p>
+<p>質が良くなかった記事は修正して、記事のテーマのバラつきを抑えるべきということでアクションアイテムにしました。</p>
+<h3 id="2度目">2度目</h3>
+<p>先程の反省点を踏まえて記事の修正した状態で、2026年の2月頭にgoogle adsenseに2度目の申請。</p>
+<p>1度目は結果返ってくるまで10日かかってましたが、今度は申請の翌日に&quot;承認メール&quot;＝合格メールが来ました。</p>
+<h2 id="総括">総括</h2>
+<p>google adsense合格を目標に2か月間ブログを作ってきました。</p>
+<p>合格に必要だったことをまとめると以下だと思います。</p>
+<ol>
+<li>ニーズのあるテーマ設定をする</li>
+</ol>
+<p>検索ニーズのあるテーマにするべきと思います。
+著者はちょっと不利なテーマですが、社会的にもう少し多数の人が検索しているようなテーマにして頂ければよいと思います。</p>
+<ol start="2">
+<li>記事の質を上げる</li>
+</ol>
+<p>誤字や脱字、文章を見て辻褄があってるかといったことは前提になっていると思いました。</p>
+<p>その上で、おそらく&quot;実際に体験しないとわからないこと&quot;が記事になっているものが何個があると合格しやすいと思います。</p>
+<ol start="3">
+<li>記事の数は30以上を目安にする</li>
+</ol>
+<p>著者の場合は、ここはあまり問題なかったようです。</p>
+<p>Internetで得られる記事を見る限り、30以上の記事は書いておくとよさそうです。</p>
+<p>あとは、この審査は半分自動化、半分は人がやっています。
+合格の判定はもちろん人のようです。</p>
+<p>人によって基準が変わるので、ある程度、運もあるはずです。
+一度ダメでも時期をずらして再チャレンジすれば、すんなり合格する可能性も出てくるのではと思います。</p>
+<p>ということで、google adsenseの合格体験記でした。
+記事がためになった、と思われたら是非読者になってください。</p>
+<p>こんなテーマでというリクエスト、大歓迎です。</p>
+
+
+<script>
+const toc = document.getElementById('toc');
+// h2 と h3 の両方を取得
+const headings = document.querySelectorAll('h2, h3');
+
+headings.forEach((heading, i) => {
+    if (!heading.id) heading.id = `heading-${i}`;
+    
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = `#${heading.id}`;
+    link.textContent = heading.textContent;
+    
+    // h3 の場合はクラスを付与して字下げする
+    if (heading.tagName === 'H3') {
+        li.classList.add('toc-h3');
+    }
+    
+    li.appendChild(link);
+    toc.appendChild(li);
+});
+
+// スムーズスクロールを有効にする
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+  
+            
+        </body>
+        </html>
